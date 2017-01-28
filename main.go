@@ -64,7 +64,7 @@ func (p palHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	for v, count := range seen {
-		if count > minPixels {
+		if count >= minPixels {
 			colours = append(colours, v)
 		}
 	}
